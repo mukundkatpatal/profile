@@ -1,0 +1,198 @@
+<mat-accordion class="example-headers-align">
+    <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>July 2023 till Date</mat-panel-title>
+            <mat-panel-description>Software Engineering Manager</mat-panel-description>
+            <mat-panel-description>Boeing, Netherlands</mat-panel-description>
+            <mat-panel-description>
+                Team Size: 11
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <ul>
+            <li>
+                Lead a cross-functional team of 15 members, spanning different geographical locations and cultural
+                backgrounds, to ensure the successful and timely execution and delivery of the project/product.
+            </li>
+            <li>
+                Align scrum teams towards the strategic organizational goals and divert their focus from output to
+                outcome.
+            </li>
+            <li>
+                Started an initiative called Reduce Silos where all the teams demonstrated their Microservice’s business
+                goal and the technology footprint. This brought the culture of working towards a common organizational
+                goal rather than working in silos helping everyone collaborate and learn better.
+            </li>
+            <li>
+                Instilled a culture of continuous learning by setting an example, completing the AZ-900 certification,
+                and subsequently encouraging team members to do the same.
+            </li>
+            <li>
+                Established clear and concise technical and personal goals for engineers and product owners, aligning
+                them with organizational objectives. This provided them with a clear sense of direction and purpose in
+                their work.
+            </li>
+            <li>
+                Cultivated a culture of positivity, trust, respect, and enjoyment among teams spanning five countries
+                and cultures. This initiative resulted in improved collaboration and understanding between teams.
+            </li>
+            <li>
+                Scored Effective and Highly Effective in an anonymous and independent survey conducted by HR for
+                Manager’s Effectiveness.
+            </li>
+        </ul>
+
+        <!-- #docregion action-bar -->
+        <mat-action-row>
+            <button mat-button color="primary" (click)="nextStep()">Next</button>
+        </mat-action-row>
+        <!-- #enddocregion action-bar -->
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Apr 2016 to Jul 2023</mat-panel-title>
+            <mat-panel-description>Senior Engineer/Tech Lead</mat-panel-description>
+            <mat-panel-description>Boeing, Netherlands</mat-panel-description>
+            <mat-panel-description>Team Size: 5</mat-panel-description>
+        </mat-expansion-panel-header>
+        <ul>
+            <li>
+                Established and documented clear, scalable operating procedures for synthetic monitoring and
+                observability. This provided precise guidance to multiple teams on how to respond in an event of
+                failures.
+            </li>
+            <li>
+                Wrote multiple Architectural Decision Records to ensure that the rationale behind specific architectural
+                decisions is comprehensible to new engineers, providing clarity on the why behind those decisions.
+            </li>
+            <li>
+                Initiated and successfully completed the adaption of nx-workspace for several angular micro-frontends
+                which improved code sharing, management and versioning and helped many teams collaborate better.
+            </li>
+            <li>
+                Led the transition of Azure DevOps build and release pipelines, from the classic editor to YML
+                pipelines. This transformative shift played a pivotal role in enabling multiple teams to efficiently
+                track changes and manage pipelines, enhancing overall development and deployment processes.
+            </li>
+            <li>
+                Advocated for the widespread adoption of the Angular-based Design System I developed across multiple
+                Boeing portfolios. Presented the system in various Boeing forums, significantly heightening interest and
+                recognizing the importance of Design Systems within Boeing. As a result of these efforts, I was honored
+                with the PrideAtBoeing Award in 2022.
+            </li>
+            <li>
+                Undertook the licensing management for the software tools and saved organization over 30K$ by better
+                organizing software license usage.
+            </li>
+            <li>
+                Architected an angular front-end UI library aligned with the portfolio's design systems, providing
+                several micro-front-end feature teams with consistency in the look and feel, as well as the behavior of
+                their UI. Today, over 170 Software engineers depend on this library is over 20 micro-frontends are built
+                using it.
+            </li>
+            <li>
+                Implemented the use of Storybook to showcase UI component behavior and created accompanying
+                documentation. This initiative proved instrumental in assisting engineering feature teams by providing a
+                clear understanding and practical demonstration of the APIs to be utilized.
+            </li>
+            <li>Implemented the use of the Lerna library to automate semantic versioning and generate change logs
+                through conventional commits. This enhancement significantly improved our team's ability to manage
+                semantic versioning, as it was seamlessly handled by the Lerna versioning pipelines.
+            </li>
+        </ul>
+        <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+            <button mat-button color="primary" (click)="nextStep()">Next</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Nov 2012 to Mar 2016</mat-panel-title>
+            <mat-panel-description>Tech Lead/Team Lead</mat-panel-description>
+            <mat-panel-description>Symphony Teleca Service, Pune</mat-panel-description>
+            <mat-panel-description>
+                Team Size: 8
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>
+            I contributed to the development of a product designed to automate the approval process for car financing
+            loans and leases. The system facilitates Business-to-Business (B2B) communication with credit unions and
+            banks, enabling the approval of loans directly at the point of sale in car dealerships.
+        </p>
+        <ul>
+            <li>
+                Led a team of 11 Engineers in the Design and Development of various projects for a US based client and
+                my other responsibilities included below
+                <ul>
+                    <li>
+                        Led a team of 11 Engineers in the Design and Development of various projects for a US based
+                        client and my other responsibilities included below
+                    </li>
+                    <li>Conduct regular onto to ones with engineers and mentor guide them.</li>
+                    <li>Organize onboarding of new engineers and their training and upskilling</li>
+                    <li>Conduct technical interviews</li>
+                    <li>Understand requirements from a US based client and align a team of 11 engineers towards the project goals.</li>
+
+                </ul>
+            </li>
+            <li>Led the design and development of .NET WCF-MSMQ based applications that experienced over 500 hits per
+                second. These applications facilitated communication with credit union web services from Equifax,
+                TransUnion, and Experian. Using the scaling capabilities of WCF, I could save my client from downtime in
+                peak hours saving them from significant losses.</li>
+            <li>Led the Design and development of mission-critical backend applications utilizing WCF to generate legal
+                documents and transmit them to third-party applications, which then physically mail the documents to
+                stakeholders. Ensuring high availability, accuracy, and scalability was crucial in this context, as any
+                failure to generate and send the legal documents could potentially expose my client to
+                legal consequences. I could achieve 98% accuracy in this project which allowed me to win Going an extra
+                Mile award in 2012.
+            </li>
+
+        </ul>
+        <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+            <button mat-button color="primary" (click)="nextStep()">Next</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 3" (opened)="setStep(3)" hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Nov 2006 to Oct 2012</mat-panel-title>
+            <mat-panel-description>Tech Lead/Team Lead</mat-panel-description>
+            <mat-panel-description>United Software Associates, Pune</mat-panel-description>
+            <mat-panel-description>
+                Team Size: 8
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <ul>
+            <li>
+                Led a team of 11 Engineers in the Design and Development of various projects for a US based client and my other responsibilities included below
+                <ul>
+                    <li>
+                        Conduct regular onto to ones with engineers and mentor guide them.
+                    </li>
+                    <li>
+                        Organize onboarding of new engineers and their training and upskilling
+                    </li>
+                    <li>
+                        Conduct technical interviews
+                    </li>
+                    <li>
+                        Understand requirements from a US based client and align a team of 11 engineers towards the project goals.
+                    </li>
+                </ul>
+            </li>
+            <li>I could scale the team from 4 to 11 members because of consistent track record of successful project completion for the client, I received Hall of the Fame award in 2010 for my leadership.</li>
+            <li>
+                Led the high priority requirement from the US client to generate Risk Based Pricing Document which came in as a result of FACT act in 2010. (Creditors must furnish a risk-based pricing notice to consumers when using a consumer report to offer credit on terms significantly less favorable than those available to a substantial proportion of consumers from the same creditor.) Successful on time high quality delivery of this project saved our customer from legal consequences
+            </li>
+            <li>
+                Led the design and development of a web-based solution using ASP.Net, ActiveX plugIns a scanning solution which would directly scan and upload the legal documents in the application. This saved an enormous amount of time for the end users as now they don’t have to first save the legal documents to their machines after scanning and allowed me to win Going an extra mile award in 2010.
+            </li>
+        </ul> 
+        <mat-action-row>
+            <button mat-button color="warn" (click)="prevStep()">Previous</button>
+            <button mat-button color="primary" (click)="nextStep()">End</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+</mat-accordion>

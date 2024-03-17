@@ -1,0 +1,8 @@
+a.mdc-list-item:hover{
+  background-color: rgb(240, 237, 237);
+  cursor: pointer;
+}
+    
+a.mdc-list-item.mdc-list-item--activated.mdc-list-item {
+    background-color: rgb(220, 237, 237);
+}
