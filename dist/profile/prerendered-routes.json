@@ -1,0 +1,10 @@
+{
+  "routes": [
+    "/aboutme",
+    "/awards",
+    "/certifications",
+    "/experience",
+    "/professionalsummary",
+    "/skills"
+  ]
+}
