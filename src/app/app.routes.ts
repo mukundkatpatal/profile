@@ -4,7 +4,6 @@ import { ProfessionalsummaryComponent } from './professionalsummary/professional
 import { TechskillsComponent } from './techskills/techskills.component';
 import { AwardsComponent } from './awards/awards.component';
 import { CertificationsComponent } from './certifications/certifications.component';
-import { EducationComponent } from './education/education.component';
 import { ExperienceComponent } from './experience/experience.component';
 
 export const routes: Routes = [
@@ -13,6 +12,5 @@ export const routes: Routes = [
   { path: 'skills', component: TechskillsComponent },
   { path: 'awards', component: AwardsComponent },
   { path: 'certifications', component: CertificationsComponent },
-  { path: 'education', component: EducationComponent },
   { path: 'experience', component: ExperienceComponent },
 ];

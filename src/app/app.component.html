@@ -59,97 +59,6 @@
     position: relative;
   }
 
-  .angular-logo {
-    max-width: 9.2rem;
-  }
-
-  .content {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 700px;
-    margin-bottom: 3rem;
-  }
-
-  .content h1 {
-    margin-top: 1.75rem;
-  }
-
-  .content p {
-    margin-top: 1.5rem;
-  }
-
-  .divider {
-    width: 1px;
-    background: var(--red-to-pink-to-purple-vertical-gradient);
-    margin-inline: 0.5rem;
-  }
-
-  .pill-group {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    flex-wrap: wrap;
-    gap: 1.25rem;
-  }
-
-  .pill {
-    display: flex;
-    align-items: center;
-    --pill-accent: var(--bright-blue);
-    background: color-mix(in srgb, var(--pill-accent) 5%, transparent);
-    color: var(--pill-accent);
-    padding-inline: 0.75rem;
-    padding-block: 0.375rem;
-    border-radius: 2.75rem;
-    border: 0;
-    transition: background 0.3s ease;
-    font-family: var(--inter-font);
-    font-size: 0.875rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.4rem;
-    letter-spacing: -0.00875rem;
-    text-decoration: none;
-  }
-
-  .pill:hover {
-    background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
-  }
-
-  .pill-group .pill:nth-child(6n + 1) {
-    --pill-accent: var(--bright-blue);
-  }
-
-  .pill-group .pill:nth-child(6n + 2) {
-    --pill-accent: var(--french-violet);
-  }
-
-  .pill-group .pill:nth-child(6n + 3),
-  .pill-group .pill:nth-child(6n + 4),
-  .pill-group .pill:nth-child(6n + 5) {
-    --pill-accent: var(--hot-red);
-  }
-
-  .pill-group svg {
-    margin-inline-start: 0.25rem;
-  }
-
-  .social-links {
-    display: flex;
-    align-items: center;
-    gap: 0.73rem;
-    margin-top: 1.5rem;
-  }
-
-  .social-links path {
-    transition: fill 0.3s ease;
-    fill: var(--gray-400);
-  }
-
-  .social-links a:hover svg path {
-    fill: var(--gray-900);
-  }
 
   @media screen and (max-width: 650px) {
     .content {
@@ -167,54 +76,44 @@
 </style>
 
 <main class="main">
+  <mat-toolbar style="position: absolute;top: 0;" color="primary">
+    <span>{{selectedItem}}</span>
+    <span style="flex: 1 1 auto;"></span>
+    <a mat-button href="../../assets/Mukund_CV.pdf" target="_blank" aria-label="downloadCV"
+      matTooltip="Download the CV">
+      <img class="logo" matButtonIcon src="../../assets/download.svg" alt="download" style="width: 100%;height: 100%;"
+        aria-hidden="false" />
+      <!-- Download CV -->
+    </a>
+    <a mat-button href="mailto:mukund.katpatal@gmail.com" target="_blank" aria-label="mailto">
+      <img class="logo" matButtonIcon src="../../assets/mail.svg" alt="mailto" style="width: 80%;height: 100%;"
+        aria-hidden="false">
+    </a>
+    <a mat-button href="https://www.linkedin.com/in/mukund-katpatal-b3a73138/" target="_blank" aria-label="linkedIn">
+      <img class="logo" matButtonIcon src="../../assets/linkedin-app-icon.svg" alt="linkedIn"
+        style="width: 80%;height: 80%;" aria-hidden="false">
+    </a>
+    <a mat-button href="https://github.com/mukundkatpatal" target="_blank" aria-label="GitHub Repository">
+      <img class="logo" matButtonIcon src="../../assets/github-circle-white-transparent.svg" alt="angular"
+        style="width: 80%;height: 80%;" aria-hidden="false">
+    </a>
+  </mat-toolbar>
+  <div style="display: flex;flex-direction: column;flex: 1;">
+    <mat-sidenav-container class="example-container">
 
-  <mat-sidenav-container class="example-container">
+      <mat-sidenav opened mode="side">
+        <mat-list role="list">
+          <a mat-list-item *ngFor="let item of list" matRipple role="listitem"
+            [class.list-item-active-background]="selectedItem == item.label" (click)="onlistItemSelected(item.label)"
+            [activated]="selectedItem === item.label" [routerLink]="item.route" routerLinkActive="active">
+            {{item.label}}
+          </a>
+        </mat-list>
+      </mat-sidenav>
+      <mat-sidenav-content>
 
-    <mat-sidenav opened mode="side">
-      <mat-list role="list">
-        <a mat-list-item *ngFor="let item of list" matRipple role="listitem"
-          [class.list-item-active-background]="selectedItem == item.label" (click)="onlistItemSelected(item.label)"
-          [activated]="selectedItem === item.label" [routerLink]="item.route" routerLinkActive="active">
-          {{item.label}}
-        </a>
-      </mat-list>
-    </mat-sidenav>
-    <mat-toolbar color="primary">
-      <span>{{selectedItem}}</span>
-      <span style="flex: 1 1 auto;"></span>
-      <a mat-button href="../../assets/Mukund_CV.pdf" 
-        target="_blank" aria-label="downloadCV"
-        matTooltip="Download the CV">
-        <img class="logo" 
-          matButtonIcon src="../../assets/download.svg" alt="download"
-          style="width: 100%;height: 100%;"
-            aria-hidden="false" />
-        <!-- Download CV -->
-      </a>
-      <a mat-button href="mailto:mukund.katpatal@gmail.com" 
-        target="_blank" aria-label="mailto">
-        <img class="logo" 
-          matButtonIcon src="../../assets/mail.svg" alt="mailto"
-          style="width: 80%;height: 100%;"
-            aria-hidden="false">
-      </a>
-      <a mat-button href="https://www.linkedin.com/in/mukund-katpatal-b3a73138/" 
-        target="_blank" aria-label="linkedIn">
-        <img class="logo" 
-          matButtonIcon src="../../assets/linkedin-app-icon.svg" alt="linkedIn"
-          style="width: 80%;height: 80%;"
-            aria-hidden="false">
-      </a>
-      <a mat-button href="https://github.com/mukundkatpatal" 
-        target="_blank" aria-label="GitHub Repository">
-        <img class="logo" 
-          matButtonIcon src="../../assets/github-circle-white-transparent.svg" alt="angular"
-          style="width: 80%;height: 80%;"
-            aria-hidden="false">
-      </a>
-    </mat-toolbar>
-    <div>
-      <router-outlet />
-    </div>
-  </mat-sidenav-container>
+        <router-outlet />
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
 </main>

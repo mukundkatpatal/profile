@@ -1,0 +1,11 @@
+
+@use '@angular/material' as mat;
+
+.profile-card {
+    @include mat.elevation-transition();
+
+    &:hover {
+      cursor: pointer;
+      @include mat.elevation(8);
+    }
+}

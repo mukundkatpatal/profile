@@ -48,12 +48,6 @@ export class AppComponent {
     {
       label: 'Experience', route: '/experience'
     },
-    // {
-    //   label: 'Trainings', route: '/trainings'
-    // },
-    {
-      label: 'Education', route: '/education'
-    },
   ];
 
   public selectedItem = 'About Me';
